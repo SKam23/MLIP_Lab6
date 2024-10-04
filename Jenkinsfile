@@ -18,11 +18,22 @@ pipeline {
                 # TODO fill out the path to conda here
                 # sudo /PATH/TO/CONDA init
 
+                python3 -m venv myenv
+                source myenv/bin/activate
+                pip install -r requirements.txt
+                
+                # Run pytest
+                pytest
+                
+
+                # Deactivate virtual environment
+                deactivate
+                
                 # TODO Complete the command to run pytest
                 # sudo /PATH/TO/CONDA run -n <Envinronment Name> <Command you want to run>
 
-                echo 'pytest not runned'
-                exit 1 #comment this line after implementing Jenkinsfile
+                echo 'pytest completed'
+                # exit 1 #comment this line after implementing Jenkinsfile
                 '''
 
             }
