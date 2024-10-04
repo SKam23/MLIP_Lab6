@@ -32,7 +32,7 @@ pipeline {
                 # TODO Complete the command to run pytest
                 # sudo /PATH/TO/CONDA run -n <Envinronment Name> <Command you want to run>
 
-                echo 'pytest completed'
+                echo 'pytest done'
                 # exit 1 #comment this line after implementing Jenkinsfile
                 '''
 
